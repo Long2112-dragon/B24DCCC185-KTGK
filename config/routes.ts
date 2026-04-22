@@ -1,4 +1,4 @@
-﻿export default [
+export default [
 	{
 		path: '/user',
 		layout: false,
@@ -37,19 +37,33 @@
 		icon: 'ArrowsAltOutlined',
 	},
 
+	{
+		path: '/khoa-hoc',
+		name: 'Qu?n l� kh�a h?c',
+		component: './KhoaHoc',
+		icon: 'BookOutlined',
+		routes: [
+			{
+				path: 'form',
+				component: './KhoaHoc/Form',
+				hideInMenu: true,
+			},
+		],
+	},
+
 	// DANH MUC HE THONG
-	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
-	// 		{
-	// 			name: 'ChucVu',
-	// 			path: 'chuc-vu',
-	// 			component: './DanhMuc/ChucVu',
-	// 		},
-	// 	],
-	// },
+	{
+		name: 'DanhMuc',
+		path: '/danh-muc',
+		icon: 'copy',
+		routes: [
+			{
+				name: 'ChucVu',
+				path: 'chuc-vu',
+				component: './DanhMuc/ChucVu',
+			},
+		],
+	},
 
 	{
 		path: '/notification',
@@ -90,3 +104,4 @@
 		component: './exception/404',
 	},
 ];
+
